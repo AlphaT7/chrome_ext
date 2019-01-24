@@ -11,6 +11,7 @@ function sendDataToBGpage(data1) {
 }
 
 // Listen for messages from BG page
+/*
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
   if (request.status == "All Done") {
     doSomething();
@@ -19,10 +20,11 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     doSomethingDifferent();
   }
 });
-
+*/
 //Check for highlights here
 
 // Useful function for removing things like <br> or quotation marks etc
+/*
 function cleanData(data) {
   var thisResult = data.replace(/\r?\n|\r/g, "");
   thisResult = thisResult.replace("[]", "");
@@ -34,7 +36,7 @@ function cleanData(data) {
   thisResult = thisResult.trim();
   return thisResult;
 }
-
+*/
 function getSelectedText() {
   var text = "";
   if (typeof window.getSelection != "undefined") {
