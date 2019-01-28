@@ -1,28 +1,39 @@
+/*
 document.onmouseup = function() {
   var selectedText = getSelectedText();
   if (selectedText) {
     sendDataToBGpage(selectedText);
   }
 };
+*/
+/*
+document.onkeyup = function(e) {
+  console.log(e.code);
+  var selectedText = getSelectedText();
+  selectedText ? console.log(selectedText) : "";
+
+  let enterkeypressed =
+    e.code == "Enter" ? true : e.code == "NumpadEnter" ? true : false;
+
+  enterkeypressed ? (selectedText ? sendDataToBGpage(selectedText) : "") : "";
+};
 
 // Send data to bg page
 function sendDataToBGpage(data1) {
   chrome.runtime.sendMessage({ paramter1: data1 }, function(response) {});
 }
-
+*/
 // Listen for messages from BG page
 /*
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
   if (request.status == "All Done") {
-    doSomething();
+    console.log(request);
   }
   if (request.status == "Terminate") {
     doSomethingDifferent();
   }
 });
 */
-//Check for highlights here
-
 // Useful function for removing things like <br> or quotation marks etc
 /*
 function cleanData(data) {
@@ -37,6 +48,7 @@ function cleanData(data) {
   return thisResult;
 }
 */
+/*
 function getSelectedText() {
   var text = "";
   if (typeof window.getSelection != "undefined") {
@@ -49,3 +61,4 @@ function getSelectedText() {
   }
   return text;
 }
+*/
